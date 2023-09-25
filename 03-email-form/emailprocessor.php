@@ -19,7 +19,7 @@ $message = "Name: $name,
 Email: $email,  
 Comments: $comment";
 				//actually sending mail is commented out to prevent spam		
-				//send_mail($email, $message);
+				send_mail($email, $message);
 				$myData->result = "success";
 				$myJSON = json_encode($myData);
 				echo $myJSON;
@@ -41,7 +41,7 @@ Comments: $comment";
 	
 	function send_mail($email, $message)
 	{
-		$to = "youremail@somewhere.com";
+		$to = "mn.cavdar21@gmail.com";
 		$from = $email;
 		$subject = "Mail from webform on your website";
 		$headers = "From: {$email}" . "\r\n" . 'Reply-To:' . $email . "\r\n" . 'X-Mailer: PHP/' . phpversion();
